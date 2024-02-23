@@ -1,0 +1,49 @@
+
+body {
+    font-size: 14.4px;
+}
+
+.header {
+    padding: 20px 44px;
+    background-image: url('/img/mainvisual.jpg');
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+
+    nav {
+        ul {
+            display: flex;
+            justify-content: end;
+
+            li {
+                list-style: none;
+
+
+                &:not(:last-child) {
+                    margin-right: 27px;
+                }
+
+                a {
+                    transition: all 0.3s ease;
+                    filter: drop-shadow(1px 1px 2px  #121212);
+                    font-weight: bold;
+                    color: #fff;
+
+                    &:hover {
+                        color: #e03131;
+                    }
+                }
+            }
+        }
+    }
+
+    &__title {
+        position: absolute;
+        top: 45%;
+        text-align: center;
+        left: 0;
+        right: 0;
+    }
+}
