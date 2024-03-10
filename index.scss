@@ -166,7 +166,6 @@ body {
         padding: 90px 0;
     }
     &__content_item {
-
         h3 {
             @include title;
             margin-bottom: 90px;
@@ -258,5 +257,31 @@ body {
             }
         }
     }
+}
+
+.location {
+    &__img {
+        height: 300px;
+        background-image: url('/img/location.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+
+        position: relative;
+
+        &--title {
+            color: #fff;
+            position: absolute;
+            display: block;
+            width: 100%;
+            text-align: center;
+            top: 40%;
+            font-size: 72px;
+            font-weight: bold;
+            filter: drop-shadow(1px 1px 10px #c0c0c0);
+        }
+    }
+
 }
 
