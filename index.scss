@@ -1,4 +1,13 @@
 
+// mixin変数
+@mixin title {
+    font-size: 40px;
+    font-weight: bold;
+    border-bottom: solid 6px #e03131;
+    display: inline-block;
+}
+
+
 body {
     font-size: 14.4px;
 }
@@ -76,7 +85,7 @@ body {
 
     &__list {
         display: flex;
-        max-width: 970px;
+        max-width: 1000px;
         margin: 0 auto;
         padding: 90px 0;
 
@@ -90,10 +99,7 @@ body {
             }
 
             &--title {
-                font-size: 40px;
-                font-weight: bold;
-                border-bottom: solid 6px #e03131;
-                display: inline-block;
+                @include title;
 
                 &:not(:first-child) {
                     margin-top: 55px;
@@ -152,4 +158,105 @@ body {
             filter: drop-shadow(1px 1px 10px #c0c0c0);
         }
     }
+
+    &__content_wrapper {
+        margin: 0 auto;
+        max-width: 1000px;
+        text-align: center;
+        padding: 90px 0;
+    }
+    &__content_item {
+
+        h3 {
+            @include title;
+            margin-bottom: 90px;
+        }
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            margin-bottom: calc(77px - 20px); // liのpaddingの20pxを減算（よく意味わかってないけど）
+
+            li {
+                width: 50%;
+                padding: 20px;
+                line-height: 2rem;
+                letter-spacing: 0.5px;
+                text-align: left;
+            }
+        }
+
+        a {
+            position: relative;
+            width: 70px;
+            // spanのpaddingに影響される横幅は0指定
+            padding: 17px 0;
+
+            // 左（上のborder）
+            &::before {
+                content: '';
+                position: absolute;
+                width: 32px;
+                height: 2px;
+                background-color: red;
+                left: 0;
+                top: 0;
+                transition: all .3s ease;
+            }
+
+            // 右（下のborder）
+            &::after {
+                content: '';
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: 32px;
+                height: 2px;
+                background-color: red;
+                transition: all .3s ease;
+            }
+            &:hover {
+                &::before, &::after {
+                    width: 100%;
+                }
+            }
+
+            span {
+                position: relative;
+                padding: 17px 45px;
+
+                // 左（横のborder）
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 2px;
+                    height: 32px;
+                    background-color: red;
+                    transition: all .3s ease;
+                }
+
+                // 右（下のborder）
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    width: 2px;
+                    height: 32px;
+                    background-color: red;
+                    transition: all .3s ease;
+                }
+
+                &:hover {
+                    &::before, &::after {
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
 }
+
