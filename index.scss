@@ -23,9 +23,6 @@ $breakpoint: (
     }
 }
 
-
-
-
 body {
     font-size: 14.4px;
 }
@@ -179,6 +176,10 @@ body {
 .about {
     &__img {
         height: 300px;
+        @include mq(sp) {
+            height: 94px;
+            background-attachment: scroll;
+        }
 
         position: relative;
         background-image: url('/img/about.jpg');
@@ -197,6 +198,10 @@ body {
             font-size: 72px;
             font-weight: bold;
             filter: drop-shadow(1px 1px 10px #c0c0c0);
+
+            @include mq(sp) {
+                font-size: 32px;
+            }
         }
     }
 
@@ -205,11 +210,18 @@ body {
         max-width: 1000px;
         text-align: center;
         padding: 90px 0;
+
+        @include mq(sp) {
+            padding: 30px 0 90px;
+        }
     }
     &__content_item {
         h3 {
             @include title;
             margin-bottom: 90px;
+            @include mq(sp) {
+                margin-bottom: 30px;
+            }
         }
 
         ul {
@@ -220,6 +232,9 @@ body {
 
             li {
                 width: 50%;
+                @include mq(sp) {
+                    width: 100%;
+                }
                 padding: 20px;
                 line-height: 2rem;
                 letter-spacing: 0.5px;
