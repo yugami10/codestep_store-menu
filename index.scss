@@ -29,7 +29,7 @@ body {
 
 .header {
     padding: 20px 44px;
-    background-image: url('/img/mainvisual.jpg');
+    background-image: url('../img/mainvisual.jpg');
     background-position: center top;
     background-size: cover;
     background-repeat: no-repeat;
@@ -79,7 +79,7 @@ body {
         // 背景画像
         position: relative;
         height: 300px;
-        background-image: url('/img/menu.jpg');
+        background-image: url('../img/menu.jpg');
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: cover;
@@ -182,7 +182,7 @@ body {
         }
 
         position: relative;
-        background-image: url('/img/about.jpg');
+        background-image: url('../img/about.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -323,7 +323,7 @@ body {
 
     &__img {
         height: 300px;
-        background-image: url('/img/location.jpg');
+        background-image: url('../img/location.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
