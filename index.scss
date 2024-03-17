@@ -317,6 +317,9 @@ body {
 
 .location {
     margin-bottom: 170px;
+    @include mq(sp) {
+        margin-bottom: 80px;
+    }
 
     &__img {
         height: 300px;
@@ -329,6 +332,12 @@ body {
         position: relative;
         margin-bottom: 90px;
 
+        @include mq(sp) {
+            height: 94px;
+            background-attachment: scroll;
+            margin-bottom: 30px;
+        }
+
         &--title {
             color: #fff;
             position: absolute;
@@ -339,16 +348,23 @@ body {
             font-size: 72px;
             font-weight: bold;
             filter: drop-shadow(1px 1px 10px #c0c0c0);
+            @include mq(sp) {
+                font-size: 32px;
+            }
         }
     }
 
     &__area {
         margin: 0 auto;
+        padding: 0 16px;
         max-width: 1000px;
         text-align: center;
         h3 {
             @include title;
             margin-bottom: 70px;
+            @include mq(sp) {
+                margin-bottom: 30px;
+            }
         }
     }
 
